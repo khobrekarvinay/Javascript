@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving License Checker</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Driving License Eligibility Checker</h1>
+        <div class="form-group">
+            <label for="age">Enter your age:</label>
+            <input type="number" id="age" placeholder="Enter your age" min="1" max="100">
+        </div>
+        <button onclick="checkEligibility()">Check Eligibility</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        function checkEligibility() {
+    const age = parseInt(document.getElementById('age').value);
+    const result = document.getElementById('result');
+
+    if (isNaN(age) || age < 1 || age > 100) {
+        result.innerHTML = 'Please enter a valid age between 1 and 100.';
+        result.style.color = 'red';
+        return;
+    }
+
+    if (age < 18) {
+        result.innerHTML = 'You are not eligible for a driving license.';
+        result.style.color = 'red';
+    } else if (age === 18) {
+        result.innerHTML = 'You are eligible for a learner\'s license.';
+        result.style.color = 'orange';
+    } else if (age > 18 && age <= 60) {
+        result.innerHTML = 'You are eligible for a driving license.';
+        result.style.color = 'green';
+    } else {
+        result.innerHTML = 'You are not eligible for a driving license.';
+        result.style.color = 'red';
+    }
+}
+
+    </script>
+</body>
+
+</html>
