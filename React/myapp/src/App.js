@@ -19,6 +19,7 @@ import UseParams from './components/24-08/useparams';
 import Propdrilling from './components/24-08/PropDrilling';
 import Mapping2 from './components/24-08/Mapping2';
 import Todo from './components/25-08/todo';
+import DynamicStyling from './components/29-08/Dynamicstyling';
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -52,6 +53,7 @@ function App() {
      
      <Route path='/mapping2' element={<Mapping2/>}/>
      <Route path='/todo' element={<Todo/>}/>
+     <Route path='/dynamicstyling' element={<DynamicStyling/>}/>
   </Routes>
       </div>
   );
