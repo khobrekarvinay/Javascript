@@ -1,0 +1,25 @@
+.counterdiv {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .buttoncol {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .buttoncol:hover {
+    background-color: #3e8e41;
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #333;
+  }
+  

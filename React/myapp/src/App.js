@@ -20,6 +20,10 @@ import Propdrilling from './components/24-08/PropDrilling';
 import Mapping2 from './components/24-08/Mapping2';
 import Todo from './components/25-08/todo';
 import DynamicStyling from './components/29-08/Dynamicstyling';
+import UseReducer from './components/1-09/useReducer';
+import RegisterValidation2 from './components/31-08/RegisterValidation2';
+import RegisterValidation from './components/31-08/RegisterValidation';
+import Usememo from './components/05-08/Usememo';
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -39,6 +43,8 @@ function App() {
     <Route path="/" element={<Home/>}/>
     <Route path="/login" element={<Login/>}/>
     <Route path="/register" element={<Register/>}/>
+    <Route path="/register-validation" element={<RegisterValidation/>}/>
+    <Route path="/register-validation2" element={<RegisterValidation2/>}/>
     <Route path='/counter' element={<Counter/>}/>
     <Route path='/useeffect1' element={<UseEffect1/>}/>
     <Route path='/useeffect2' element={<UseEffect2/>}/>
@@ -54,6 +60,9 @@ function App() {
      <Route path='/mapping2' element={<Mapping2/>}/>
      <Route path='/todo' element={<Todo/>}/>
      <Route path='/dynamicstyling' element={<DynamicStyling/>}/>
+     <Route path='/usereducer' element={<UseReducer/>}/>
+     <Route path="/usememo" element={<Usememo/>}/>
+     
   </Routes>
       </div>
   );
