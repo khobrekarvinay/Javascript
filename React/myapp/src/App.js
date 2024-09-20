@@ -24,6 +24,8 @@ import UseReducer from './components/1-09/useReducer';
 import RegisterValidation2 from './components/31-08/RegisterValidation2';
 import RegisterValidation from './components/31-08/RegisterValidation';
 import Usememo from './components/05-08/Usememo';
+import Product from './components/14-09/axiosfetch';
+import UseRef from './components/15-09/UseRef';
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -37,7 +39,7 @@ function App() {
   return (
     <div>
       <Navbar/>
-      
+      <UseRef/>
       <Routes>
     <Route path="*" element={<NotFound/>}/>
     <Route path="/" element={<Home/>}/>
@@ -62,7 +64,7 @@ function App() {
      <Route path='/dynamicstyling' element={<DynamicStyling/>}/>
      <Route path='/usereducer' element={<UseReducer/>}/>
      <Route path="/usememo" element={<Usememo/>}/>
-     
+     <Route path="/Axious" element={<Product/>}/>
   </Routes>
       </div>
   );

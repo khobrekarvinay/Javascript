@@ -44,6 +44,9 @@ router("/useEffect1")
     function Tomapping2(){
         router("/mapping2")
     }
+    function Axious(){
+      router("/Axious")
+    }
       return (
         <div className="parent">
             <h1 onClick={Home}>Home</h1>
@@ -59,6 +62,7 @@ router("/useEffect1")
             <h1 onClick={Tomapping}>Mapping1</h1>
             <h1 onClick={Tomapping2}>Mapping2</h1>
             <h1 onClick={Todo}>Todo</h1>
+            <h1 onClick={Axious}>Axios</h1>
         </div>
       )
 }
