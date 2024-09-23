@@ -27,6 +27,7 @@ import Usememo from './components/05-08/Usememo';
 import Product from './components/14-09/axiosfetch';
 import UseRef from './components/15-09/UseRef';
 import ReduxCounter from './components/19-09/Reduxcounter';
+import RapidApi from './components/Weather/RapidApi'
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -40,7 +41,7 @@ function App() {
   return (
     <div>
       <Navbar/>
-      <UseRef/>
+      <RapidApi/>
       <Routes>
     <Route path="*" element={<NotFound/>}/>
     <Route path="/" element={<Home/>}/>
