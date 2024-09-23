@@ -1,81 +1,131 @@
-/* Center the app container */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f4f8;
-  }
-  
-  h1 {
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  form {
-    margin-bottom: 20px;
-  }
-  
-  input {
-    padding: 10px;
-    width: 200px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    margin-right: 10px;
-    outline: none;
-    transition: border-color 0.3s ease;
-  }
-  
-  input:focus {
-    border-color: #007BFF;
-  }
-  
-  button {
-    padding: 10px 15px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Style for loading and error messages */
-  p {
-    font-size: 18px;
-    color: #666;
-  }
-  
-  p.error {
-    color: red;
-  }
-  
-  /* Weather info container */
-  div {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    margin-top: 20px;
-  }
-  
-  h2 {
-    font-size: 24px;
-    color: #007BFF;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    font-size: 18px;
-    color: #555;
-  }
-  
-  /* Add some transition effect */
-  input, button {
-    transition: all 0.3s ease-in-out;
-  }
-  
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #2b2b2b;
+}
+
+.weather-app {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.weather-app h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: #ff69b4;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.weather-app-input {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.weather-app-input input {
+  width: 70%;
+  height: 40px;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3b3b3b;
+  color: #fff;
+}
+
+.weather-app-input button {
+  width: 30%;
+  height: 40px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #ff69b4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+}
+
+.loader {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #66cccc;
+}
+
+.errordisplay {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #ff3333;
+}
+
+.displayer {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #66cccc;
+}
+
+.current-weather {
+  background-color: #2b2b2b;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.current-weather p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+}
+
+.forecast-of-day {
+  background-color: #2b2b2b;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.forecast-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.forecast-container .left {
+  font-size: 18px;
+  color: #66cccc;
+}
+
+.forecast-container .right {
+  font-size: 18px;
+  color: #ff69b4;
+}
