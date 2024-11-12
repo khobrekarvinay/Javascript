@@ -4,7 +4,7 @@ import {useState} from 'react';
 import Login from './components/login';
 import NotFound from './components/NotFound';
 import Home from './components/Homepage';
-import Register from './components/register';
+import Register from '../src/components/Backend-Link/Registration';
 import {
   Routes,
   Route,
@@ -28,6 +28,9 @@ import Product from './components/14-09/axiosfetch';
 import UseRef from './components/15-09/UseRef';
 import ReduxCounter from './components/19-09/Reduxcounter';
 import RapidApi from './components/Weather/RapidApi'
+import LoginPage from './components/Backend-Link/LoginPage';
+import HomePage from './components/Backend-Link/HomePage';
+import Dashboard from './components/Backend-Link/Dashboard';
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -41,12 +44,13 @@ function App() {
   return (
     <div>
       <Navbar/>
-      <RapidApi/>
+      {/* <RapidApi/> */}
       <Routes>
     <Route path="*" element={<NotFound/>}/>
-    <Route path="/" element={<Home/>}/>
-    <Route path="/login" element={<Login/>}/>
+    <Route path="/" element={<HomePage/>}/>
+    <Route path="/login" element={<LoginPage/>}/>
     <Route path="/register" element={<Register/>}/>
+    <Route path="/dashboard" element={<Dashboard/>}/>
     <Route path="/register-validation" element={<RegisterValidation/>}/>
     <Route path="/register-validation2" element={<RegisterValidation2/>}/>
     <Route path='/counter' element={<Counter/>}/>

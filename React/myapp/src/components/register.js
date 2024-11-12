@@ -30,6 +30,7 @@ function Register() {
           return toast.error("password and confirm password not matched")
         }
     try {
+      alert("Second register page");
       // const response = await axios.post('http://localhost:8000/api/v1/auth/register', { userData });
       const response={
         data:{success:true, message: "Registration succesfully completed.."},
