@@ -31,6 +31,9 @@ import RapidApi from './components/Weather/RapidApi'
 import LoginPage from './components/Backend-Link/LoginPage';
 import HomePage from './components/Backend-Link/HomePage';
 import Dashboard from './components/Backend-Link/Dashboard';
+import ProductEntryForm from './components/Backend-Link/ProductEntry';
+import ProductList from './components/Backend-Link/ProductList';
+import Singleproduct from './components/Backend-Link/Singleproduct'
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -50,6 +53,10 @@ function App() {
     <Route path="/" element={<HomePage/>}/>
     <Route path="/login" element={<LoginPage/>}/>
     <Route path="/register" element={<Register/>}/>
+    <Route path="/addproduct" element={<ProductEntryForm />} />
+    <Route path="/singleproduct" element={<Singleproduct />} />
+    <Route path="/getproduct" element={<ProductList />} />
+
     <Route path="/dashboard" element={<Dashboard/>}/>
     <Route path="/register-validation" element={<RegisterValidation/>}/>
     <Route path="/register-validation2" element={<RegisterValidation2/>}/>

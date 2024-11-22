@@ -89,6 +89,30 @@
   font-size: 24px;
   margin-left: 10px;
 }
+/* src/App.css */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  max-width: 150px;  /* Set your desired max width */
+  max-height: 150px; /* Set your desired max height */
+  width: auto;       /* Maintains aspect ratio */
+  height: auto;      /* Maintains aspect ratio */
+  object-fit: cover; /* Ensures the image fills the box without stretching */
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
